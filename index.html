@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victoria 2 - Inicio</title> 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">  
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="inicio()" onkeydown="admteclas(event)">
     <nav>
         <div class="logo"></div> 
         <div class="opciones">
@@ -22,30 +23,170 @@
                 Iniciar Sesión</div>
         </div>
     </nav>
-    <div class="star">
-        <img class="img1s" style="left: 0px;" src="img/Star 1.png" alt="">
-        <img class="img1s" style="left: 50px;" src="img/Star 1.png" alt="">
-        <img class="img1s" style="left: 100px;" src="img/Star 1.png" alt="">
-        <img class="img1s" style="left: 150px;" src="img/Star 1.png" alt="">
-        <img class="img1s" style="left: 200px;" src="img/Star 2.png" alt="">    
-        <div class="descstar">
-            92% de reseñas positivas en </div>
-        <img class="img2s" src="img/steam.png" alt="">
-    </div> 
-    <div class="titulo">
-        Prueba el mejor juego de estrategia historica
-    </div>
-    <div class="contdes">
-        Basado en el siglo XIX
+    <div class="cubrir"  onclick="quitarimagen()"></div>
+    <div class="sec-11">
+        <div class="star">
+            <img class="img1s" id="idenstar1" style="left: 0px;" src="img/Star 1.png" alt="">
+            <img class="img1s" id="idenstar2" style="left: 50px;" src="img/Star 1.png" alt="">
+            <img class="img1s" id="idenstar3" style="left: 100px;" src="img/Star 1.png" alt="">
+            <img class="img1s" id="idenstar4" style="left: 150px;" src="img/Star 1.png" alt="">
+            <img class="img1s" id="idenstar5" style="left: 200px;" src="img/Star 2.png" alt="">    
+            <div class="descstar">
+                92% de reseñas positivas en </div>
+            <img class="img2s" src="img/steam.png" alt="">
+        </div> 
+        <div class="titulo">
+            El mejor juego de estrategia historica
+        </div>
+        <div class="contdes" onmouseenter="sigloXIX(true)" onmouseleave="sigloXIX(false)">
+            Basado en el siglo XIX
+            <div class="msg">El siglo XIX es el siglo transcurrido entre el año 1801 y el año 1900
+            </div>
+
+        </div>
+        <p class="descvc2">
+            Victoria 2 es un videojuego de estrategia histórica basado en la gestión de recursos y la toma de decisiones en la administración de un país. 
+        </p>
+        <button class="btdesc">
+            <span class="btdesctx">Instalar en Steam </span>
+            <span id="btdescry">|</span>
+        </button> 
+        <div class="imgpr"  onclick="imagengrande()"></div>
 
     </div>
-    <p class="descvc2">
-        Victoria 2 es un videojuego de estrategia histórica basado en la gestión de recursos y la toma de decisiones en la administración de un país. 
-    </p>
-    <button class="btdesc">
-        Instalar en Steam
-    </button>
-    <img src="img/vc2.png" class="imgpr" alt="">
+
+    <div class="sec-12">
+        <img  src="img/mapa1.png" alt="">
+        <div class="txtl1" style="top: 100px;">Elije un país existente en el año 1836. </div>
+        <div class="txtl1" style="top: 250px;">Conviértelo en la mayor potencia mundial. </div>
+    </div>  
+    
+    <div class="tlsec" style="top: 1500px; z-index: 1;">
+        Administra tu nación 
+    </div>
+     <div class="sec-13">
+        
+        <div class="desccont">
+            <div id="cartas-1" class="contadm" onclick="exocards(1)">
+                <div class="tladm">
+                    Industria
+                </div>
+                <div class="tresdesc">
+                    
+                <div class="btxadm" style="left: 40px;"> Administra tus recursos</div>
+                <div class="btxadm" style="left: 320px;">Maneja tu población </div>
+                <div class="btxadm" style="left: 450px;">Construye fabricas</div>
+                
+                </div><img src="img/descimg1.png" alt="" class="imgadm">
+
+                <button class="btinfoadm">Mas Información</button>
+            </div>
+            <div id="cartas-2" class="contadm" onclick="exocards(2)">
+                <div class="tladm">
+                    Tecnologia
+                </div>
+                <div class="tresdesc">
+                    
+                <div class="btxadm" style="left: 40px;">Aumenta tu poder militar</div>
+                <div class="btxadm" style="left: 320px;">Mejora tu economía </div>
+                <div class="btxadm" style="left: 450px;">Investiga cientos de mejoras</div>
+                
+                </div><img src="img/descimg2.png" alt="" class="imgadm">
+
+                <button class="btinfoadm">Mas Información</button>
+            </div>
+            <div id="cartas-3" class="contadm" onclick="exocards(3)">
+                <div class="tladm">
+                    Política
+                </div>
+                <div class="tresdesc">
+                    
+                <div class="btxadm" style="left: 40px;">Elije el partido gobernante</div>
+                <div class="btxadm" style="left: 320px;">Decide el futuro del país </div>
+                <div class="btxadm" style="left: 450px;">Realiza reformas en tu nación </div>
+                
+                </div><img src="img/descimg3.png" alt="" class="imgadm">
+
+                <button class="btinfoadm">Mas Información</button>
+            </div>
+            
+            <div id="cartas-4" class="contadm" onclick="exocards(4)">
+                <div class="tladm">
+                    Diplomacia
+                </div>
+                <div class="tresdesc">
+                    
+                <div class="btxadm" style="left: 40px;">Influye en países mas débiles </div>
+                <div class="btxadm" style="left: 320px;">Inicia Guerras con tus rivales </div>
+                <div class="btxadm" style="left: 450px;">Crea alianzas con tus vecinos </div>
+                
+                </div><img src="img/descimg3.png" alt="" class="imgadm">
+
+                <button class="btinfoadm">Mas Información</button>
+            </div>
+        </div>
+    </div> 
+
+    <div class="cntneg">
+        <div class="tlsec" style="top: 100px;">
+            Forma el ejercito mas poderoso
+        </div>
+    </div>    
+    <div class="sec-14">
+        <div class="tlml">
+            Entrena tus unidades militares
+            
+            <ul>
+                <li>Infantería  <br></li>
+                <li>Caballería  <br></li> 
+                <li>Artillería <br></li>
+            </ul>
+            
+        </div>
+        <img src="img/ml1img.png" alt="">
+    </div>
+    <div class="sec-15">
+        <div class="secml">
+            <div class="tlmlb">Crea batallones para pelear </div> 
+            <img src="img/ml2img.png" alt="">
+        </div>
+        <div class="secml">
+            <div class="tlmlb"> Combate en grandes Batallas </div>
+            
+            <img src="img/ml3img.png" alt="">
+        </div>
+    </div>
+
+    <div class="sec-16">
+        <div class="endtl">        
+            Enfrenta Grandes Guerras 
+        </div>
+        <img src="img/ml4img.png" alt="">
+    </div>
+   
+    <footer>
+        <div class="fotcol">
+            <img class="logovc2" src="img/logovc2.png" alt="">
+            <div class="logosm">
+                <img class="logored" src="img/Facebook.svg" alt="">
+                <img class="logored" src="img/Youtube.svg" alt="">
+                <img class="logored" src="img/Twitter.svg" alt="">                
+                <img class="logored" src="img/Twitch.svg" alt="">
+            </div>
+        </div>
+        <div class="fotcol">
+            <div class="contvc2">
+                <img src="img/logoparadox.png" alt="">
+                <div class="tlvic2">Victoria II  </div>
+                
+            </div>
+            <div class="politica">
+                Politica de usuario | Politica de privacidad
+            </div>
+        </div>
+
+    </footer>
+
 
 
 
