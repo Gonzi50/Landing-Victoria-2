@@ -16,6 +16,7 @@ nav{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    cursor : url('img/cursor.png'), auto;   
 }   
 .txnav{
     display: grid;
@@ -29,13 +30,16 @@ nav{
     border: 1px solid var(--blan);
     cursor: pointer;
     background-color: var(--gris);
+    filter: drop-shadow(#2F2F2F 1px 1px 20px);
+    cursor : url('img/cursor.png'), auto;   
 }
 .logo{
     background-image: url(img/paradox.png);
     margin: 10px;
     width: 62px;
     height: 60px;
-    cursor: pointer;
+    
+    cursor : url('img/cursor.png'), auto;   
 }
 .opciones{
     position: relative;
@@ -50,7 +54,7 @@ nav{
     right: 50px;
     display: flex;
     flex-direction: row;
-    cursor: pointer;
+    cursor : url('img/cursor.png'), auto;   
     margin: 10px;
     padding: 5px;
     border-radius: 20px;
@@ -69,6 +73,10 @@ nav{
 
 .inisnav:hover{
     border: 1px solid var(--blan);
-    cursor: pointer;
+    cursor : url('img/cursor.png'), auto;   
     background-color: var(--gris);  
+    filter: drop-shadow(#2F2F2F 1px 1px 20px);
+}
+.txnav.actnav{
+    background-color: #2F2F2F;
 }
