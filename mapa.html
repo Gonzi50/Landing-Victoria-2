@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoria 2 - Inicio</title> 
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body onload="iniciomapa()" style="background-color: #111111;">
+    <nav>
+        <div class="logo"></div> 
+        <div class="opciones">
+            <div class="txnav " onclick="AdmPestañas('index')" >Inicio</div>
+            <div class="txnav actnav"> Mapa</div>
+            <div class="txnav ">Mods </div>
+        </div>
+        <div class="inisnav">
+            <div class="logouser"></div>
+            <div class="textuser">
+                </div>
+        </div>
+    </nav>
+    <div class="cubrir"> </div>
+    <div class="mapafull"></div>
+    <div class="contcartamapa">
+        <div class="cartamapa inccmap"  onclick="cartasmapa(0)">
+            <div class="tlmapa"> Europa</div>
+            <img src="img/mapaf1.png" class="imgmapan" alt="">
+        </div>
+        <div class="cartamapa inccmap"  onclick="cartasmapa(1)">
+            <div class="tlmapa"> Norte America </div>
+            <img src="img/mapaf2.png" class="imgmapan" alt="">
+        </div>
+        <div class="cartamapa inccmap"  onclick="cartasmapa(2)">
+            <div class="tlmapa"> Centro América </div>
+            <img src="img/mapaf3.png" class="imgmapan" alt="">
+        </div>
+        <div class="cartamapa inccmap"  onclick="cartasmapa(3)">
+            <div class="tlmapa"> Sudamérica </div>
+            <img src="img/mapaf4.png" class="imgmapan" alt="">
+        </div>
+        <div class="cartamapa inccmap"  onclick="cartasmapa(4)"> 
+            <div class="tlmapa"> Africa </div> 
+            <img src="img/mapaf5.png" class="imgmapan" alt="">
+        </div>
+        <div class="cartamapa inccmap"  onclick="cartasmapa(5)">
+            <div class="tlmapa"> Oriente Proximo</div>
+            <img src="img/mapaf6.png" class="imgmapan" alt="">
+        </div>
+        <div class="cartamapa inccmap"  onclick="cartasmapa(6)">
+            <div class="tlmapa"> Extremo Oriente</div>
+            <img src="img/mapaf7.png" class="imgmapan" alt="">
+        </div>
+    </div>
+
+
+
+
+
+    <footer style="top: 1500px;">  
+        <div class="fotcol">
+            <img class="logovc2" src="img/logovc2.png" alt="">
+            <div class="logosm">
+                <img class="logored" src="img/Facebook.svg" alt="">
+                <img class="logored" src="img/Youtube.svg" alt="">
+                <img class="logored" src="img/Twitter.svg" alt="">                
+                <img class="logored" src="img/Twitch.svg" alt="">
+            </div>
+        </div>
+        <div class="fotcol">
+            <div class="contvc2">
+                <img src="img/logoparadox.png" alt="">
+                <div class="tlvic2">Victoria II  </div>
+                
+            </div>
+            <div class="politica">
+                Politica de usuario | Politica de privacidad
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

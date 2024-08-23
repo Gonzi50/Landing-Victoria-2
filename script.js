@@ -257,7 +257,34 @@ function MostrarNombreEnElNav(){
     obj.textContent = localStorage.getItem("NombreUser");
 }
 
+// Agrandar la carta del mapa presionada y achicar la anterior
+let cartagrande = -1;
 
+function cartasmapa(n){
+    let cont = document.querySelector('.contcartamapa');
+    let el = cont.children[n];
+    el.style.width = '40%';
+    let tlmap = el.querySelector('.tlmapa');
+    tlmap.style.transform = 'none';
+    tlmap.style.paddingLeft = 'initial';
+    let imgmap = el.querySelector('.imgmapan');
+    imgmap.style.display = 'block';
+    imgmap.style.width = '80%';
+    try{
+        let exel = cont.children[cartagrande];
+        exel.style.width = '5%';
+        let extlmap = exel.querySelector('.tlmapa');
+        extlmap.style.transform = 'rotateZ(90deg)';
+        extlmap.style.paddingLeft = '10vw';
+        let eximgmap = exel.querySelector('.imgmapan');
+        eximgmap.style.width = '0';
+    }catch{};
+    if(cartagrande == n){
+        cartagrande=-1; 
+    } else{
+        cartagrande = n;
+    }
+}
 
 
 
@@ -273,6 +300,10 @@ function inicio(){
     steam1(true);
     steam2(true);
     letrassteambtn(5);
+}
+function iniciomapa(){
+    MostrarNombreEnElNav(); 
+    
 }
 function admteclas(event){
     if(event.keyCode == 27){
@@ -293,4 +324,12 @@ function quitarCB(){
 function ComLatToComVert(str){
     str.replace(/`/g, "'");
     return str;
+}
+function AdmPestañas(n){
+    if(n=="mapa"){
+        window.location.replace('mapa.html');
+    }
+    if(n=="index"){
+        window.location.replace('index.html');
+    }
 }
